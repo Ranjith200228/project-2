@@ -76,8 +76,7 @@ flowchart LR
   K --> L[Google Cloud Run - Serverless Compute]
 
 
-
-## 😊 Real-Time Sentiment Intelligence
+ 😊 Real-Time Sentiment Intelligence
 Automatically evaluates emotional tone:
 
 Score	Interpretation
