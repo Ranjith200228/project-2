@@ -201,29 +201,3 @@ Endpoint	Method	Purpose
 
 
 ---
----
----
-
-## 🏗️ System Architecture
-
-```mermaid
-flowchart LR
-  A[Client Browser] --> B[MediaRecorder API - Audio Capture]
-  B --> C[Frontend - HTML + JavaScript]
-  C --> D[Flask REST API - Docker Container]
-
-  D --> E[Google Speech-to-Text]
-  E --> F[Transcript]
-
-  D --> G[Google Natural Language API]
-  G --> H[Sentiment Score]
-
-  D --> I[Google Text-to-Speech]
-  I --> J[Synthesized Audio]
-
-  F --> K[Artifact Storage - Timestamped Outputs]
-  H --> K
-  J --> K
-
-  K --> L[Google Cloud Run - Serverless Compute]
-
