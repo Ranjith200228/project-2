@@ -54,6 +54,8 @@ The system integrates multiple Google Cloud AI services into a cohesive microser
 
 ---
 
+---
+
 ## 🏗️ System Architecture
 
 ```mermaid
@@ -80,9 +82,11 @@ flowchart LR
 
 ---
 
+---
+
 ## 😊 Real-Time Sentiment Intelligence
 
-Automatically evaluates emotional tone using Natural Language processing.
+Automatically evaluates emotional tone using Natural Language Processing.
 
 | Score | Interpretation |
 |--------|----------------|
@@ -103,9 +107,9 @@ Automatically evaluates emotional tone using Natural Language processing.
 Transforms written text into natural, human-like audio.
 
 ### Key Capabilities
-✔ Human-like speech synthesis  
-✔ Downloadable audio artifacts  
-✔ Bidirectional conversational workflow  
+- Human-like speech synthesis  
+- Downloadable audio artifacts  
+- Bidirectional conversational workflow  
 
 ---
 
@@ -143,6 +147,7 @@ The platform runs entirely on **Google Cloud Run**, delivering a fully managed i
 - Environment-based configuration  
 
 ---
+
 
 
 ## 📂 Repository Structure
