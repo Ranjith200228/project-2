@@ -79,9 +79,6 @@ flowchart LR
 
   K --> L[Google Cloud Run - Serverless Compute]
 
-
----
-
 ---
 
 ## 😊 Real-Time Sentiment Intelligence
