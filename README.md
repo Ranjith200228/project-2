@@ -154,6 +154,8 @@ cloud-conversational-ai/
 
 Designed to mirror **industry backend standards** for scalability and maintainability.
 
+### system architecture ;
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/c683442a-f99e-4c09-b885-21791ec071bf" />
 ---
 
 ## ⚙️ Run Locally (Developer Setup)
@@ -189,5 +191,3 @@ Open:
 
 👉 http://127.0.0.1:5000
 ---
-### system architecture ;
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/c683442a-f99e-4c09-b885-21791ec071bf" />
