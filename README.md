@@ -40,42 +40,7 @@ The system integrates multiple Google Cloud AI services into a cohesive microser
 
 ---
 
-## 🏗️ System Architecture
 
-Client Browser
-│
-▼
-MediaRecorder API (Audio Capture)
-│
-▼
-Frontend (HTML + JavaScript)
-│
-▼
-Flask REST API (Containerized)
-│
-├──────────────► Google Speech-to-Text
-│ │
-│ ▼
-│ Transcript
-│
-├──────────────► Natural Language API
-│ │
-│ ▼
-│ Sentiment Score
-│
-└──────────────► Text-to-Speech
-│
-▼
-Synthesized Audio
-│
-▼
-Artifact Storage (timestamped outputs)
-│
-▼
-Google Cloud Run (Serverless Compute)
-
-
----
 
 ## ⚡ Core Capabilities
 
@@ -86,6 +51,30 @@ Google Cloud Run (Serverless Compute)
 - Downloadable transcript artifacts  
 
 ---
+## 🏗️ System Architecture
+
+```mermaid
+flowchart LR
+
+A[Client Browser] --> B[MediaRecorder API<br>(Audio Capture)]
+B --> C[Frontend<br>(HTML + JavaScript)]
+C --> D[Flask REST API<br>(Docker Container)]
+
+D --> E[Google Speech-to-Text]
+E --> F[Transcript]
+
+D --> G[Google Natural Language API]
+G --> H[Sentiment Score]
+
+D --> I[Google Text-to-Speech]
+I --> J[Synthesized Audio]
+
+F --> K[Artifact Storage<br>(Timestamped Outputs)]
+H --> K
+J --> K
+
+K --> L[Google Cloud Run<br>(Serverless Compute)]
+----
 
 ### 😊 Real-Time Sentiment Intelligence
 
@@ -150,7 +139,6 @@ The platform runs entirely on **Google Cloud Run**, enabling:
 ---
 
 ## 📂 Repository Structure
-
 cloud-conversational-ai/
 │
 ├── src/
@@ -211,17 +199,18 @@ gcloud run deploy conversational-ai \
 ## Cloud Run automatically provisions HTTPS and load balancing.
 
 
-🔗 API Surface
+### 🔗 API Surface
 Endpoint	Method	Purpose
 /	GET	UI + artifact listing
 /upload	POST	Audio → transcription + sentiment
 /upload_text	POST	Text → speech
 /uploads/<file>	GET	Retrieve audio
 /results/<file>	GET	Retrieve outputs
-📊 Production Engineering Considerations
+
+### 📊 Production Engineering Considerations
 This system is intentionally designed with extensibility in mind.
 
-Immediate Enterprise Upgrades
+### Immediate Enterprise Upgrades
 ✅ Migrate artifacts → Google Cloud Storage
 ✅ Introduce Pub/Sub for async processing
 ✅ Add IAM-based authentication
@@ -231,7 +220,7 @@ Immediate Enterprise Upgrades
 
 These enhancements would evolve the system into a fully enterprise-ready conversational intelligence platform.
 
-🎯 Engineering Competencies Demonstrated
+### 🎯 Engineering Competencies Demonstrated
 This project showcases my ability to:
 
 ✔ Architect end-to-end AI platforms
