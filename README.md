@@ -117,24 +117,14 @@ The platform runs entirely on **Google Cloud Run**, delivering a fully managed i
 
 ---
 
-###🐳 Production Deployment
-Build Container
-gcloud builds submit --tag gcr.io/<PROJECT_ID>/conversational-ai
-Deploy to Cloud Run
-gcloud run deploy conversational-ai \
-  --image gcr.io/<PROJECT_ID>/conversational-ai \
-  --platform managed \
-  --region us-east1 \
-  --allow-unauthenticated
-Cloud Run automatically provisions HTTPS and load balancing.
----
 ### 🔗 API Surface
-Endpoint	Method	Purpose
-/	GET	UI + artifact listing
-/upload	POST	Audio → transcription + sentiment
-/upload_text	POST	Text → speech
-/uploads/<file>	GET	Retrieve audio
-/results/<file>	GET	Retrieve outputs
+-Endpoint	Method	Purpose
+-/	GET	UI + artifact listing
+-/upload	POST	Audio → transcription + sentiment
+-/upload_text	POST	Text → speech
+-/uploads/<file>	GET	Retrieve audio
+-/results/<file>	GET	Retrieve outputs
+
 ---
 ### 🎯 Engineering Competencies Demonstrated
 ✔ Architect end-to-end AI platforms
