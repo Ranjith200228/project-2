@@ -52,6 +52,8 @@ The system integrates multiple Google Cloud AI services into a cohesive microser
 
 ---
 
+---
+
 ## 🏗️ System Architecture
 
 ```mermaid
@@ -76,37 +78,42 @@ flowchart LR
   K --> L[Google Cloud Run - Serverless Compute]
 
 
- 😊 Real-Time Sentiment Intelligence
-Automatically evaluates emotional tone:
-
-Score	Interpretation
-> 0	Positive
-= 0	Neutral
-< 0	Negative
-Used in real-world systems such as:
-
-Customer support AI
-
-Voice assistants
-
-Contact center analytics
 ---
+
+## 😊 Real-Time Sentiment Intelligence
+
+Automatically evaluates emotional tone using Natural Language processing.
+
+| Score | Interpretation |
+|--------|----------------|
+| > 0 | Positive |
+| = 0 | Neutral |
+| < 0 | Negative |
+
+### 💡 Real-World Applications
+- Customer support analytics  
+- Voice assistants  
+- Contact center intelligence  
+- Conversational AI platforms  
+
 ---
 
 ## 🔊 Neural Text-to-Speech Engine
 
-Transforms written text into natural audio:
+Transforms written text into natural, human-like audio.
 
+### Key Capabilities
 ✔ Human-like speech synthesis  
-✔ Downloadable audio files  
-✔ Bidirectional conversational capability  
+✔ Downloadable audio artifacts  
+✔ Bidirectional conversational workflow  
 
 ---
 
 ## ☁️ Serverless Cloud Deployment
 
-The platform runs entirely on **Google Cloud Run**, enabling:
+The platform runs entirely on **Google Cloud Run**, delivering a fully managed infrastructure.
 
+### Benefits
 - Automatic scaling  
 - Zero infrastructure management  
 - High availability  
@@ -116,26 +123,27 @@ The platform runs entirely on **Google Cloud Run**, enabling:
 
 ## 🧰 Technology Stack
 
-### Languages
+### 👨‍💻 Languages
 - Python  
 - JavaScript  
 
-### Backend
+### ⚙️ Backend
 - Flask REST API  
-- Stateless service design  
+- Stateless service architecture  
 
-### Cloud & AI
+### ☁️ Cloud & AI Services
 - Google Cloud Run  
-- Speech-to-Text API  
-- Natural Language API  
-- Text-to-Speech API  
+- Google Speech-to-Text API  
+- Google Natural Language API  
+- Google Text-to-Speech API  
 
-### DevOps
+### 🚀 DevOps
 - Docker containerization  
 - Service account authentication  
 - Environment-based configuration  
 
 ---
+
 
 ## 📂 Repository Structure
 
@@ -208,18 +216,6 @@ Endpoint	Method	Purpose
 /upload_text	POST	Text → speech
 /uploads/<file>	GET	Retrieve audio
 /results/<file>	GET	Retrieve outputs
----
-### 📊 Production Engineering Considerations
-Immediate enterprise upgrades:
-
-✅ Migrate artifacts → Google Cloud Storage
-✅ Introduce Pub/Sub for async processing
-✅ Add IAM-based authentication
-✅ Implement rate limiting
-✅ Enable Cloud Monitoring
-✅ Build CI/CD pipeline
-
-These enhancements would evolve the system into a fully enterprise-ready conversational intelligence platform.
 ---
 ### 🎯 Engineering Competencies Demonstrated
 ✔ Architect end-to-end AI platforms
